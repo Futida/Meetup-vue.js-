@@ -1,6 +1,6 @@
-# {{ name }}
+# Meetup
 
-> {{ description }}
+> Create Meetup app with vue.js
 
 # Build Setup
 
