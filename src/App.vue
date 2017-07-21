@@ -4,7 +4,6 @@
             <v-list>
                 <v-list-tile v-for="item in menuItems"
                              :key="item.title"
-                             router
                              :to="item.link">
                     <v-list-tile-action>
                         <v-icon>{{ item.icon }}</v-icon>
@@ -15,7 +14,7 @@
         </v-navigation-drawer>
         <v-toolbar dark class="orange darken-2">
             <v-toolbar-side-icon
-                    @click.native="sideNav = !sideNav"
+                    @click.stop="sideNav = !sideNav"
                     class="hidden-sm-and-up">
             </v-toolbar-side-icon>
             <v-toolbar-title>
@@ -25,8 +24,7 @@
             <v-toolbar-items class="hidden-xs-only">
                 <v-btn flat v-for="item in menuItems"
                        :key="item.title"
-                       router
-                       :href="item.link">
+                       :to="item.link">
                     <v-icon left dark>{{ item.icon }}</v-icon>
                     {{ item.title }}
                 </v-btn>
