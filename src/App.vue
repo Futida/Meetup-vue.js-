@@ -50,7 +50,7 @@
                     { icon: 'lock_open', title: 'Sign in',link:'/signin' }
                 ],
 
-                trash: true,
+                trash: last,
             }
         }
     }
