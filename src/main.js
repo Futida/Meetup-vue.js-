@@ -4,6 +4,7 @@ import VueResource from 'vue-resource'
 import VueFire from 'vuefire'
 import Vuetify  from 'vuetify'
 import router from './router/index'
+import store from './store'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import App from './App.vue'
 
@@ -19,8 +20,9 @@ Vue.use(VueGoogleMaps, {
 });
 
 new Vue({
-    el: '#app',
+    store,
     router,
+    el: '#app',
     render: h => h(App)
 });
 
